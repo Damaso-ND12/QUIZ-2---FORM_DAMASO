@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Quiz 2 Forms</title>
+    <style>
+      body {
+        background-image: url('https://wallpaperset.com/w/full/c/d/e/422484.jpg'); background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 30px;
+      }
+      form {
+        background-color: rgba(222, 184, 135, 0.829);
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 5px solid rgb(248, 201, 13);
+        border-radius: 10px;
+      }
+      fieldset {
+        border: 1px solid black;
+        margin: 0;
+        padding: 10px;
+      }
+      legend {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      select,
+      textarea,
+      input[type="datetime-local"],
+      input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+       display: inline-block;
+      }
+      button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .error-message {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Personal Information</h1>
+    <form action="/submit" method="post">
+      <fieldset>
+        <legend>Personal Information by DAMASO, NIKKOLA DIVINE V. (BSIT 101)</legend>
+        <fieldset>
+            <legend style="font-weight: bold; font-size: 18px;">INFO</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </fieldset>
+        <fieldset>
+            <legend style="font-weight: bold; font-size: 18px;">GENDER</legend>
+            <input type="radio" id="male" name="gender" value="male" required style="display: inline-block;">
+            <label for="male" style="display: inline-block;">Male</label>
+            <br>
+            <input type="radio" id="female" name="gender" value="female" required style="display: inline-block;">
+            <label for="female" style="display: inline-block;">Female</label>
+            <br>
+            <input type="radio" id="other" name="gender" value="other" required style="display: inline-block;">
+            <label for="other" style="display: inline-block;">Other</label>
+        </fieldset>
+        <fieldset style="border: 1px solid black; padding: 10px;">
+            <legend style="font-weight: bold; font-size: 18px;">HOBBIES</legend>
+            <label style = "display: inline-block;">
+                <input type="checkbox" id="hobby1" name="hobbies" value="hobby1" style="display: inline-block;">
+                <label for="hobby1" style="display: inline-block;">Eating</label>
+                <input type="checkbox" id="hobby2" name="hobbies" value="hobby2" style="display: inline-block;">
+                <label for="hobby2" style="display: inline-block;">Sleeping</label>
+                <input type="checkbox" id="hobby3" name="hobbies" value="hobby3" style="display: inline-block;">
+                <label for="hobby3" style="display: inline-block;">Gaming</label>
+                <input type="checkbox" id="hobby4" name="hobbies" value="hobby4" style="display: inline-block;">
+                <label for="hobby4" style="display: inline-block;">Cooking</label>
+                <input type="checkbox" id="hobby5" name="hobbies" value="hobby5" style="display: inline-block;">
+                <label for="hobby5" style="display: inline-block;">Filming</label>
+                <input type="checkbox" id="hobby6" name="hobbies" value="hobby6" style="display: inline-block;">
+                <label for="hobby6" style="display: inline-block;">Sports</label>
+                <input type="checkbox" id="hobby7" name="hobbies" value="hobby7" style="display: inline-block;">
+                <label for="hobby7" style="display: inline-block;">Reading</label>
+                <input type="checkbox" id="hobby8" name="hobbies" value="hobby8" style="display: inline-block;">
+                <label for="hobby8" style="display: inline-block;">Writing</label>
+                <input type="checkbox" id="hobby9" name="hobbies" value="hobby9" style="display: inline-block;">
+                <label for="hobby9" style="display: inline-block;">Baking</label>
+              </fieldset>
+          
+          <fieldset style="border: 1px solid black; padding: 10px;">
+            <legend style="font-weight: bold; font-size: 18px;">Countries</legend>
+            <label for="country">Country:</label>
+            <select id="country" name="country" required style="margin-left: 5px;">
+              <option value="">Select Country</option>
+              <option value="usa">USA</option>
+              <option value="uk">UK</option>
+              <option value="canada">Canada</option>
+              <option value="australia">Australia</option>
+              <option value="philippines">Philippines</option>
+              <option value="japan">Japan</option>
+              <option value="malaysia">Malaysia</option>
+              <option value="singapore">Singapore</option>
+              <option value="norway">Norway</option>
+              <option value="china">China</option>
+              <option value="dubai">Dubai</option>
+              <option value="italy">Italy</option>
+            </select>
+          </fieldset>
+          
+          <br>
+          <br>
+          
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments" style="width: 300px; height: 100px;"></textarea>
+          
+          <br>
+          
+          <label for="file">Upload a File:</label>
+          <input type="file" id="file" name="file" required>
+          
+          <br>
+          
+          <label for="datetime">Date and Time:</label>
+          <input type="datetime-local" id="datetime" name="datetime" required>
+          
+          <br>
+          </fieldset>
+          <br>
+          
+          <center>
+            <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px;">Submit</button>
+          </center>
